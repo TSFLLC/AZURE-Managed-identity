@@ -16,3 +16,37 @@ https://www.thelazyadministrator.com/2023/03/09/migrate-your-runbooks-in-azure-a
 
 ##How to Schedule an Azure SQL Database’s Stored Procedure
 https://global.hitachi-solutions.com/blog/azure-sql-databases-stored-procedure/
+
+
+
+
+
+####THIS SCRIPT WAS TWSTED AND WORK
+Write-Output "Run started"
+# Instantiate the connection to the SQL Database
+$sqlConnection = new-object System.Data.SqlClient.SqlConnection
+# Connect to the the account used the Managed Identity
+Connect-AzAccount -Identity
+# Get a Token
+$token = (Get-AzAccessToken -ResourceUrl https://database.windows.net ).Token
+# Initialize the connection String
+$sqlConnection.ConnectionString = "Data Source=<serverName>.database.windows.net;Initial Catalog=<DB_Name>;Connect Timeout=60" 
+# Set the Token to be used by the connection
+$sqlConnection.AccessToken = $token
+# Open the connection
+$sqlConnection.Open()
+Write-Output "Azure SQL database connection opened"
+# Define the SQL command to run
+$sqlCommand = new-object System.Data.SqlClient.SqlCommand
+# Allow Long Executions
+$sqlCommand.CommandTimeout = 0
+# Associate the created connection
+$sqlCommand.Connection = $sqlConnection
+Write-Output "Issuing command to run stored procedure"
+# Execute the SQL command
+$sqlCommand.CommandText= "exec [dbo].[AzureSQLMaintenance] @Operation='all' ,@LogToTable=1"
+$result = $sqlCommand.ExecuteNonQuery()
+Write-Output "Stored procedure execution completed"
+# Close the SQL connection
+$sqlConnection.Close()
+Write-Output "Run completed"
