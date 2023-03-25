@@ -5,4 +5,8 @@ https://stackoverflow.com/questions/72230503/how-to-run-an-azure-sql-server-stor
 
 
 ##SQL DB maintenance activity using Automation accounts for Azure SQL
+https://techcommunity.microsoft.com/t5/azure-data-blog/sql-db-maintenance-activity-using-automation-accounts-for-azure/ba-p/3370081
+
+
+##MIGRATE YOUR RUNBOOKS IN AZURE AUTOMATION TO MANAGED IDENTITIES
 https://www.thelazyadministrator.com/2023/03/09/migrate-your-runbooks-in-azure-automation-to-managed-identities/#Update_Runbook_Code_to_Use_Managed_Identities
