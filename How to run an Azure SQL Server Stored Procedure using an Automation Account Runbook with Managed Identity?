@@ -1,1 +1,8 @@
+
+##How to run an Azure SQL Server Stored Procedure using an Automation Account Runbook with Managed Identity?
 https://stackoverflow.com/questions/72230503/how-to-run-an-azure-sql-server-stored-procedure-using-an-automation-account-runb
+
+
+
+##SQL DB maintenance activity using Automation accounts for Azure SQL
+https://www.thelazyadministrator.com/2023/03/09/migrate-your-runbooks-in-azure-automation-to-managed-identities/#Update_Runbook_Code_to_Use_Managed_Identities
