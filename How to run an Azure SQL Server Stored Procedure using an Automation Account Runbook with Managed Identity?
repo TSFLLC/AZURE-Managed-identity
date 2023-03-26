@@ -17,6 +17,9 @@ https://www.thelazyadministrator.com/2023/03/09/migrate-your-runbooks-in-azure-a
 ##How to Schedule an Azure SQL Database’s Stored Procedure
 https://global.hitachi-solutions.com/blog/azure-sql-databases-stored-procedure/
 
+##Using sysassign managed identity   (Powershell)
+https://learn.microsoft.com/en-us/azure/automation/enable-managed-identity-for-automation
+
 
 
 
